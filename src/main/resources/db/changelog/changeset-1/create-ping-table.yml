@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-ping-table
+      author: andrew
+      changes:
+        - createTable:
+            tableName: ping
+            columns:
+              - column:
+                  name: ping_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: ping_date_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

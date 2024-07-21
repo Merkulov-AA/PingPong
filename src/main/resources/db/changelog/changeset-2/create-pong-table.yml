@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-pong-table
+      author: andrew
+      changes:
+        - createTable:
+            tableName: pong
+            columns:
+              - column:
+                  name: pong_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pong_date_time
+                  type: datetime
+                  constraints:
+                    nullable: true
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

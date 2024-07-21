@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: pingpong
+    #autoconfigure:
+    #exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    #profiles:
+    #active: jpa
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: ping-pong-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+        spring.json.use.type.headers: true
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  binder:
+    brokers: localhost:9092
+    producer-properties:
+      spring.json.add.type.headers: true
+    consumer-properties:
+      spring.json.use.type.headers: true
+      spring.json.trusted.packages: '*'
