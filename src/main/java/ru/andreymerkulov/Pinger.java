@@ -3,17 +3,12 @@ package ru.andreymerkulov;
 import lombok.AllArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.andreymerkulov.dto.PingDTO;
-import ru.andreymerkulov.dto.PongDTO;
 import ru.andreymerkulov.event.PingEvent;
-import ru.andreymerkulov.event.PongEvent;
-import ru.andreymerkulov.repository.PingRepository;
 import ru.andreymerkulov.service.PingService;
 
-import java.time.LocalDateTime;
 
 import static org.apache.kafka.common.utils.Utils.sleep;
 

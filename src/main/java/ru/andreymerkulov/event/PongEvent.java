@@ -1,9 +1,7 @@
 package ru.andreymerkulov.event;
 
-import lombok.Data;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
-import ru.andreymerkulov.dto.PingDTO;
 import ru.andreymerkulov.dto.PongDTO;
 
 @Getter

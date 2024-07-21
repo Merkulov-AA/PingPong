@@ -5,10 +5,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.andreymerkulov.dto.PingDTO;
-import ru.andreymerkulov.dto.PongDTO;
-import ru.andreymerkulov.event.PingEvent;
 import ru.andreymerkulov.event.PongEvent;
-import ru.andreymerkulov.service.PingService;
 import ru.andreymerkulov.service.PongService;
 
 import java.time.LocalDateTime;

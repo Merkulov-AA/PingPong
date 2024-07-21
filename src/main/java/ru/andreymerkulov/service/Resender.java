@@ -1,7 +1,6 @@
 package ru.andreymerkulov.service;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationEventPublisher;
@@ -16,7 +15,6 @@ import ru.andreymerkulov.model.Ping;
 import ru.andreymerkulov.model.Pong;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component("Resender")
 @AllArgsConstructor

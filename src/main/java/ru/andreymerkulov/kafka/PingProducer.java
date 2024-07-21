@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ru.andreymerkulov.dto.PingDTO;
 import ru.andreymerkulov.dto.PongDTO;
 import ru.andreymerkulov.event.PingEvent;
 import ru.andreymerkulov.service.PingService;
